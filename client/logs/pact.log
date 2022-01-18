@@ -1,0 +1,62 @@
+I, [2022-01-18T12:57:59.168949 #20801]  INFO -- : Registered expected interaction GET /orders
+D, [2022-01-18T12:57:59.169137 #20801] DEBUG -- : {
+  "description": "a request for orders",
+  "providerState": "there are orders",
+  "request": {
+    "method": "GET",
+    "path": "/orders"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "items": {
+          "name": "burger",
+          "quantity": 2,
+          "value": 100
+        }
+      },
+      "min": 1
+    }
+  },
+  "metadata": null
+}
+I, [2022-01-18T12:57:59.177904 #20801]  INFO -- : Received request GET /orders
+D, [2022-01-18T12:57:59.178002 #20801] DEBUG -- : {
+  "path": "/orders",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-01-18T12:57:59.178645 #20801]  INFO -- : Found matching response for GET /orders
+D, [2022-01-18T12:57:59.178735 #20801] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "items": {
+        "name": "burger",
+        "quantity": 2,
+        "value": 100
+      }
+    },
+    "min": 1
+  }
+}
+I, [2022-01-18T12:57:59.185971 #20801]  INFO -- : Verifying - interactions matched
+I, [2022-01-18T12:57:59.189237 #20801]  INFO -- : Cleared interactions
+I, [2022-01-18T12:57:59.192921 #20801]  INFO -- : Writing pact for OrderApi to /Users/laurabennett/2021/TRAINING/Order-Pact-Example/pacts/orderweb-orderapi.json
